@@ -1,0 +1,119 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  touch-action: none;
+  user-select: none;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ── HUD ─────────────────────────────────────────────── */
+#hud {
+  position: fixed;
+  top: 20px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+#hud-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#coin-count {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+#distance {
+  font-size: 13px;
+  opacity: 0.55;
+}
+
+#pause-btn {
+  pointer-events: all;
+  background: none;
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1;
+}
+
+#pause-btn:hover { background: #000; color: #fff; }
+
+/* ── Overlay (start / pause screen) ─────────────────── */
+#overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.88);
+  gap: 16px;
+  padding: 24px;
+}
+
+#overlay.hidden { display: none; }
+
+#title {
+  font-size: clamp(36px, 8vw, 72px);
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+#msg {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.7;
+  max-width: 320px;
+}
+
+#start {
+  margin-top: 8px;
+  padding: 14px 36px;
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: 700;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: -0.3px;
+}
+
+#start:hover { background: #333; }
+
+/* ── Disclaimer ──────────────────────────────────────── */
+#disclaimer {
+  position: fixed;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 11px;
+  opacity: 0.3;
+  pointer-events: none;
+}

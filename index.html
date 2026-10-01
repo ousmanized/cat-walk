@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Cat Walk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud">
+    <div id="hud-left">
+      <span id="coin-count">&#9675; 0</span>
+      <span id="distance">0 m</span>
+    </div>
+    <button id="pause-btn">Pause</button>
+  </div>
+
+  <div id="overlay">
+    <h1 id="title">Cat Walk</h1>
+    <p id="msg">A cat that never stops.<br>Collect coins. Dodge rocks.</p>
+    <button id="start">Start walking</button>
+  </div>
+
+  <div id="disclaimer">Made with canvas &amp; vanilla JS</div>
+
+  <script src="game.js"></script>
+</body>
+</html>
